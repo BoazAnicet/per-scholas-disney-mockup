@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: WaltDisneyFont;
+  src: url(fonts/NewWaltDisneyUi-8YdA.ttf);
+}
+@font-face {
+  font-family: WaltDisneyUI;
+  src: url(fonts/NewWaltDisneyFontRegular-BPen.ttf);
+}
+:root {
+  --rose: #f72585ff;
+  --grape: #7209b7ff;
+  --zaffre: #3a0ca3ff;
+  --neon-blue: #4361eeff;
+  --vivid-sky-blue: #4cc9f0ff;
+  --grey: #777;
+  --delay: 0.2s;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.black {
+  color: black;
+}
+
+.grape {
+  background-color: var(--grape);
+}
+
+.neon-blue {
+  background-color: var(--neon-blue);
+}
+
+.rose {
+  background-color: var(--rose);
+}
+
+.vivid-sky-blue {
+  background-color: var(--vivid-sky-blue);
+}
+
+.zaffre {
+  background-color: var(--zaffre);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header {
+  padding: 1rem;
+  background-color: #fff;
+}
+header .logo {
+  font-family: WaltDisneyFont;
+  font-size: 2rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+header ul {
+  display: flex;
+  list-style: none;
+}
+header ul li {
+  display: flex;
+  align-items: center;
+}
+header ul li a {
+  text-decoration: none;
+  color: var(--grey);
+}
+header ul li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  border-bottom-right-radius: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.2s transform;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#hero {
+  background-color: #eee;
+  padding: 0;
+  position: relative;
+  padding: 8rem;
+  overflow: hidden;
+}
+#hero .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#hero .wrapper .content {
+  width: 50%;
+}
+#hero .wrapper .content h2 {
+  line-height: 4rem;
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+  max-width: 350px;
+}
+#hero .wrapper .content p {
+  color: var(--grey);
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  max-width: 350px;
+}
+#hero .wrapper .content .buttons button:not(:last-child) {
+  margin-right: 1rem;
+}
+#hero .wrapper .img-wrapper {
+  width: 50%;
+}
+#hero .wrapper .img-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+#testimonials {
+  background-color: var(--grape);
+}
+#testimonials h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+#testimonials .container .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#testimonials .container .content .testimonial {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#testimonials .container .content .testimonial .text {
+  line-height: 1.5rem;
+  color: var(--grey);
+  margin-bottom: 1.5rem;
+}
+#testimonials .container .content .testimonial .name {
+  font-weight: bold;
+  margin-top: auto;
+}
+#testimonials .container .content .testimonial .title {
+  color: var(--grey);
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+#team h2 {
+  margin-bottom: 2rem;
+}
+#team #members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+#team #members .member {
+  position: relative;
+  border-radius: 0.5rem;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+#team #members .member .details {
+  position: absolute;
+  top: 75%;
+  left: 1rem;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+#team #members .member .details .name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#team #members .member .details .title {
+  font-size: 14px;
+}
+
+#faq {
+  background-color: var(--vivid-sky-blue);
+}
+#faq h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+#faq .questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+#faq .questions .question {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+#faq .questions .question .heading {
+  display: flex;
+  margin-bottom: 1rem;
+}
+#faq .questions .question .heading i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 99999px;
+}
+#faq .questions .question .heading h4 {
+  line-height: 1.5rem;
+}
+#faq .questions .question p {
+  line-height: 1.5rem;
+  color: var(--grey);
+}
+
+footer {
+  padding: 4rem 0;
+  background-color: var(--zaffre);
+}
+footer h3 {
+  color: var(--rose);
+}
+footer .company {
+  max-width: 300px;
+}
+footer .company h2 {
+  font-family: WaltDisneyFont;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+footer .company p {
+  line-height: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+footer .company .socials {
+  display: flex;
+}
+footer .company .socials i {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 40;
+  width: 40;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--rose);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .company .socials i:not(:last-child) {
+  margin-right: 0.5rem;
+}
+footer .links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+footer .links ul {
+  list-style-type: none;
+}
+footer .links ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+footer .links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .copy {
+  padding: 2rem 0 0 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer .copy span {
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#team2 .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#team2 .content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 14rem;
+}
+#team2 .content ul li {
+  font-size: 24px;
+}
+#team2 .content .member {
+  position: relative;
+  border-radius: 0.5rem;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  animation: member 0.4s linear;
+  animation-timing-function: ease;
+}
+#team2 .content .member .details {
+  position: absolute;
+  top: 75%;
+  left: 1rem;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+#team2 .content .member .details .name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#team2 .content .member .details .title {
+  font-size: 14px;
+}
+
+@keyframes member {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-down {
+  0% {
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#loader {
+  position: relative;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.squares {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tiny-square {
+  position: absolute;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  animation: grow 1s infinite ease-in-out;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    top: -70px;
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.green {
+  background-color: #00f5d4;
+  left: -100px;
+}
+
+.blue {
+  background-color: #00bbf9;
+  left: -50px;
+  animation-delay: calc(var(--delay) * 2);
+}
+
+.purple {
+  background-color: #9b5de5;
+  animation-delay: calc(var(--delay) * 3);
+}
+
+.pink {
+  background-color: #f15bb5;
+  left: 50px;
+  animation-delay: calc(var(--delay) * 4);
+}
+
+.yellow {
+  background-color: #fee440;
+  left: 100px;
+  animation-delay: calc(var(--delay) * 5);
+}
+
+#main {
+  animation: fade-in-up 0.2s linear;
+}
+
+.show {
+  animation: fade-in-up 1s linear;
+}/*# sourceMappingURL=style.css.map */
